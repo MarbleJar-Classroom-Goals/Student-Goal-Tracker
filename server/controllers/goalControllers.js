@@ -7,7 +7,7 @@ goalController.findStudentGoals = (req, res, next) => {
 
   const { studentID } = req.params;
 
-  Goal.find({ student: studentID }, (err, result) => {
+  Goal.find({ studentID: studentID }, (err, result) => {
     if (err) {
       return next({
         log: err.message,
